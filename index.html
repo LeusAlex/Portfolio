@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  <!-- Для адаптации (по ширине экрана) -->
+    <meta name="description" content="Портфолио дизайнера Александра Леуса">  <!-- Мета-описание для поиска -->
+    <title>Портфолио дизайнера</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">  <!-- Сбарсывает стили по усмолчанию -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Перейти к контенту</a>
+
+    <main class="main-grid" id="main">
+
+      <header class="header">
+        <h1 class="logo">Engineer.</h1>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="#projects">Проекты</a>
+            <a href="#about">Обо мне</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+      </header>
+
+      <section class="hero" id="home">
+          <h2>Александр Леус</h2>
+          <h3>Инженер.  </h3>
+          <p>Создаю надежные технические решения.</p>
+      </section>
+
+        
+    <section class="work" id="projects" aria-labelledby="projects-title"> <!-- С пометкой заголовка для браузера -->
+      <h2 id="projects-title" class="project-title">Портфолио</h2>
+      <ul class="gallery" >
+        <li class="project-grid__item">
+          <a href="https://oskol.city/news/industry/85228/" class="project-card-link">
+          <article class="project-card"> <!-- Для семантики -->
+            <h3 class="project-card-title">Объекты горнодобывающих комплексов</h3>
+            <img src="img/УМ.jpg" alt="Фото объекта горнодобывающего комплекса: общий вид">
+          </article>
+          </a> 
+         </li>
+         <li class="project-grid__item">
+          <a href="https://черномор.транснефть.рф/media-center/newspress/news/ao-chernomortransneft-prodolzhaet-rekonstruktsiyu-magistralnogo-nefteprovoda-tikhoretsk-novorossiysk/" class="project-card-link">
+          <article class="project-card">
+            <h3 class="project-card-title">Нефтегазовые объекты</h3>
+            <img src="img/Черноморка.jpg" alt="Фото нефтегазового объекта: схема инфраструктуры">
+           </article>
+             </a> 
+         </li>
+         <li class="project-grid__item">
+          <a href="https://patents.google.com/patent/RU219773U1/ru" class="project-card-link">
+           <article class="project-card">
+             <h3 class="project-card-title">Установка для автоматической биопсии</h3> 
+               <img src="img/Биопсия.jpg" alt="3D‑модель установки для автоматической биопсии">    
+            </article>
+           </a> 
+        </li>
+        <li class="project-grid__item">
+           <a href="https://auto.ru/motorcycle/used/sale/ural/m_72/3207566-7f2f4d73/" class="project-card-link">
+          <article class="project-card">
+            <h3 class="project-card-title">Кастомный мотоцикл Урал</h3>
+            <img src="img/Урал.jpg" alt="Кастомный мотоцикл Урал: общий вид">
+          </article>
+          </a>
+        </li>
+        <li class="project-grid__item">
+          <a href="https://thearsenale.com/blogs/magazine/ushba-yamaha-trx850-motorcycle" class="project-card-link">
+          <article class="project-card">
+            <h3 class="project-card-title">Кастомный мотоцикл Yamaha</h3>
+            <img src="img/Ямаха.jpg" alt="Кастомный мотоцикл Yamaha: общий вид, фото из журнала">
+          </article>
+          </a>
+        </li>
+        <li class="project-grid__item">
+          <a href="https://vk.com/album12400908_254218924" class="project-card-link">
+          <article class="project-card">
+            <h3 class="project-card-title">3D-модель ЧПУ станка</h3>
+            <img src="img/ЧПУ.jpg" alt="3D‑модель ЧПУ станка: вид спереди, основные узлы">
+          </article>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="about" id="about">
+        <h2 class="section-title">О себе</h2>
+        <p>Управляю строительством промышленных объектов, собираю кастомные мотоциклы, занимаюсь медицинскими техническими проектами. В арсенале профессиональных навыков: 3D‑печать, металлообработка и литьё металлов и полимеров — это позволяет воплощать сложные инженерные решения от концепции до готового изделия. </p>
+    </section>
+
+    <aside class="photo">
+         <img src="img/Инженер.avif" alt="Рисунок инженера">
+    </aside>
+
+    <section id="contact">
+        <h2 class="section-title">Обратная связь</h2>
+            <form id="contact-form">
+            <ol class="form-fields">
+              <li class="form-field">
+                   <label for="name">Имя *</label>
+                    <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                    <div id="name-error" aria-live="polite" class="error-message"></div>
+              </li>
+              <li class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <div id="email-error" aria-live="polite" class="error-message"></div>
+             </li>
+             <li class="form-field-checkbox">
+                    <label for="subscribe" class="checkbox-label" > Подписаться на рассылку</label>
+                    <input type="checkbox" id="subscribe" name="subscribe">
+              </li>
+          </ol>
+          <button type="submit">Отправить</button>
+          </form>
+    </section>
+
+    <footer class="footer">
+            <p>Leus@pochta.com</p>
+            <p>
+                <a href="#">HH</a> /
+                <a href="#">Авито</a> /
+                <a href="#">Leus.com</a>
+            </p>
+    </footer>
+    </main>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            let hasError = false;
+
+            document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+
+            if (!name.value.trim()) {
+                document.getElementById('name-error').textContent = 'Поле "Имя" обязательно для заполнения';
+                hasError = true;
+            }
+
+            if (hasError) return;
+            alert('Форма отправлена!');
+        });
+    </script>
+</body>
+</html>
